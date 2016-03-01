@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+JUNEBUG_INTERFACE=${JUNEBUG_INTERFACE:-0.0.0.0}
+JUNEBUG_PORT=${JUNEBUG_PORT:-8080}
 REDIS_HOST=${REDIS_HOST:-127.0.0.1}
 REDIS_PORT=${REDIS_PORT:-6379}
 REDIS_DB=${REDIS_DB:-1}
@@ -11,7 +13,9 @@ AMQP_PASSWORD=${AMQP_PASSWORD:-guest}
 
 echo "Starting Junebug with redis://$REDIS_HOST:$REDIS_PORT/$REDIS_DB and amqp://$AMQP_USER:$AMQP_PASSWORD@$AMQP_HOST:$AMQP_PORT/$AMQP_VHOST"
 
-jb --port 8080 \
+jb \
+    --interface $JUNEBUG_INTERFACE \
+    --port $JUNEBUG_PORT \
     --redis-host $REDIS_HOST \
     --redis-port $REDIS_PORT \
     --redis-db $REDIS_DB \
