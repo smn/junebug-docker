@@ -6,7 +6,7 @@ RUN apt-get-install.sh python-dev
 RUN apt-get-install.sh libjpeg-dev
 RUN apt-get-install.sh zlib1g-dev
 RUN pip install vxyowsup
-RUN pip install junebug
+RUN pip install junebug==0.1.1
 COPY ./junebug-entrypoint.sh /scripts/
 EXPOSE 8080
 
