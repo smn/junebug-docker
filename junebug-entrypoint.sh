@@ -23,4 +23,5 @@ jb \
     --amqp-vhost $AMQP_VHOST \
     --amqp-port $AMQP_PORT \
     --amqp-user $AMQP_USER \
-    --amqp-password $AMQP_PASSWORD
+    --amqp-password $AMQP_PASSWORD \
+    --channels whatsapp:vxyowsup.whatsapp.WhatsAppTransport
