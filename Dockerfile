@@ -1,6 +1,7 @@
 FROM praekeltfoundation/python-base
 MAINTAINER Praekelt Foundation <dev@praekeltfoundation.org>
 
+RUN apt-get-install.sh python-dev
 RUN pip install vxyowsup
 RUN pip install junebug
 COPY ./junebug-entrypoint.sh /scripts/
